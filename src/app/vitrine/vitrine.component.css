@@ -1,0 +1,132 @@
+body {
+    background-color: #1f1f31;
+}
+
+.spacer {
+    height: 65px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.promotions {
+    background-color: #3e4255;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.promo-header {
+    background-color: #423e47;
+    padding: 15px;
+    text-align: center;
+    border-top: 3px solid #eee241;
+}
+
+.promo-header h2 {
+    margin: 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.promo-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.promo-item {
+    text-align: center;
+    width: 23%; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin: 0 6px; 
+    
+}
+
+.promo-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.promo-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.promo-description {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buy-button {
+    background-color: #596dc7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-button:hover {
+    background-color: #454cb9;
+}
+
+.promo-price {
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: #e63946;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box {
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    border-top: 3px solid #2d2d3f;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.box1 {
+    background-color: #dcd7e2;
+}
+
+.box2 {
+    background-color: #d9d6dd;
+}
+
+.box3 {
+    background-color: #d9d4df;
+}
+
+.box4 {
+    background-color: #e1dbe9;
+}
+
