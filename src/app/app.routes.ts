@@ -6,6 +6,7 @@ import { CestaComponent } from './cesta/cesta.component';
 import { LoginComponent } from './login/login.component';
 import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
 
+
 export const routes: Routes = [
     { path: "detalhes", component: DetalhesComponent },
     { path: "cadastro", component: CadastroComponent },

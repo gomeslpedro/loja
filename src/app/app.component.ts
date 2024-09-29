@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { HeaderComponent } from './header/header.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

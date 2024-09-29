@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="spacer"></div>
+<div class="content">
+    <div class="login">
+        <div class="login-header">
+            <h2>Login</h2>
+        </div>
+        <br>
+        <div class="inputEmail">E-mail:</div> <input type="email" [(ngModel)]="obj.email" placeholder="Digite o e-mail utilizado no cadastro." required><br><br>
+        <div class="inputSenha">Senha:</div> <input type="password" [(ngModel)]="obj.senha" placeholder="Digite sua senha." required>
+        <br><br>
+        <button class="botaoLogin" (click)="fazerLogin()">Entrar</button>
+        <br>
+        <b class="mensagem">{{mensagem}}</b>
+        <div class="esqueciSenha">
+            <a class="esqueciSenha-link" href="./esqueciSenha">
+                <div class="esqueciSenha-text">Esqueceu sua senha? Clique aqui!</div>
+            </a>
+        </div>
+        <br>
+        <div class="cadastro">
+            <a class="cadastro-link" href="./cadastro">
+                <div class="cadastro-text">Cadastre-se agora!</div>
+            </a>
+        </div>
+        
