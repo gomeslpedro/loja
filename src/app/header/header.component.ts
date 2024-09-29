@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router) {}
 
-  navigateToCadastro() {
-    this.router.navigate(['/cadastro']);
+  navigateToLogin() {
+    this.router.navigate(['/login']);
   }
    
 }
