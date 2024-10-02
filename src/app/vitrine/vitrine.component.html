@@ -29,3 +29,28 @@
     </div>
   </div>
 </div>
+<div class="banner-container">
+  <div class="banner-content">
+<img src="/banner5.jpg" alt="Banner" class="banner-img">
+  </div>
+</div>
+
+<div class="itens">
+
+  <div class="promo-content">
+    <div class="promo-item" *ngFor="let produto of lista.slice(0, 4)">
+      <img [src]="produto.imagem" alt="{{ produto.nome }}" class="promo-img" (click)="navigateToDetalhe(produto)">
+      
+      <div class="promo-price">
+        <span class="old-price">{{ produto.precoAntigo | currency:'BRL':'symbol':'1.2-2' }}</span>
+        <span class="new-price">{{ produto.valor | currency:'BRL':'symbol':'1.2-2' }}</span>
+      </div>
+
+      <p class="promo-description">{{ produto.nome }}</p>
+
+      <button class="buy-button" *ngIf="produto.quantidade > 0" (click)="navigateToDetalhe(produto)">
+        Comprar
+      </button>
+    </div>
+  </div>
+</div>

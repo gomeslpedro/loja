@@ -21,11 +21,21 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.itens {
+    border-top: 3px solid #f1d324;
+    border-bottom: 3px solid #f1d324;
+    background-color: #3e4255;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .promo-header {
     background-color: #423e47;
     padding: 15px;
     text-align: center;
-    border-top: 3px solid #eee241;
+    border-top: 3px solid #e7d807;
 }
 
 .promo-header h2 {
@@ -105,6 +115,7 @@ body {
 }
 
 .box {
+    color: rgb(117, 117, 151);
     width: 600px;
     height: 500px;
     border-radius: 10px;
@@ -114,19 +125,16 @@ body {
     position: relative;
 }
 
-.box1 {
-    background-color: #dcd7e2;
-}
 
-.box2 {
-    background-color: #d9d6dd;
-}
-
-.box3 {
-    background-color: #d9d4df;
-}
-
-.box4 {
-    background-color: #e1dbe9;
-}
-
+.banner-container {
+    text-align: center;
+    margin-top: 30px; 
+    margin-bottom: 70px;
+  }
+  
+  .banner-img {
+    width: 100%; 
+    height: auto;
+    max-height: 1100px; 
+    border-radius:10px ;
+  }
