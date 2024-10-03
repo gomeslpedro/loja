@@ -9,5 +9,4 @@ export class Cliente {
     public cep: String = "";
     public cidade: String = "";
     public complemento: String = "";
-    public uf: String="";
 }

@@ -1,2 +1,28 @@
-<h2>Cadastro</h2>
-<p> cadastro funfando</p>
+<div class="spacer"></div>
+<div class="content">
+    <div class="cadastro">
+        <div class="cadastro-header">
+            <h2>Cadastro</h2>
+        </div>
+        <br>
+        <div class="inputNome">Nome:</div> <input type="text" [(ngModel)]="obj.nome" placeholder="Insira seu nome completo" required>
+        <br><br>
+        <div class="inputEmail">E-mail:</div> <input type="email" [(ngModel)]="obj.email" placeholder="Insira seu email" required>
+        <br><br>
+        <div class="inputSenha">Senha:</div> <input type="password" [(ngModel)]="obj.senha" placeholder="Insira sua senha" required>
+        <br><br>
+        <div class="inputTelefone">Telefone:</div> <input type="text" [(ngModel)]="obj.telefone" placeholder="Insira seu telefone" required>
+        <br><br>
+        <div class="inputDocumento">Documento:</div> <input type="text" [(ngModel)]="obj.documento" placeholder="Insira seu documento" required>
+        <br><br>
+        <div class="inputLogradouro">Logradouro:</div> <input type="text" [(ngModel)]="obj.logradouro" placeholder="Insira seu logradouro" required>
+        <br><br>
+        <div class="inputCep">CEP:</div> <input type="text" [(ngModel)]="obj.cep" placeholder="Insira seu CEP | Exemplo: 00000-000" required>
+        <br><br>
+        <div class="inputCidade">Cidade:</div> <input type="text" [(ngModel)]="obj.cidade" placeholder="Insira sua cidade" required>
+        <br><br>
+        <div class="inputComplemento">Complemento:</div> <input type="text" [(ngModel)]="obj.complemento" placeholder="Insira seu complemento se necessário">
+        <br><br>
+        <button class="botaoCadastro" (click)="gravar()">Cadastre-se</button>
+        <br>
+        <b class="mensagem">{{mensagem}}</b>
