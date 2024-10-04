@@ -1,49 +1,49 @@
-
 <body>
   <div *ngIf="item">
-<div class="product-details">
-    <div class="product-image">
-      <img [src]="item.imagem" alt="Imagem do Produto" class="zoom-image">
-    </div>
-
-    <div class="product-info">
-      <h3 class="product-name">{{ item.nome }}</h3>
-      <p class="product-description">{{ item.descritivo }}</p>
-
-      <div class="pricing">
-        <p class="old-price">De:  {{ item.precoAntigo  | currency:'BRL':'symbol':'1.2-2' }}</p>
-        <p class="current-price">Por: {{ item.preco  | currency:'BRL':'symbol':'1.2-2'}}</p>
-        <p class="pix-price">Ou em 1x de {{ item.preco  | currency:'BRL':'symbol':'1.2-2'}} no Pix</p>
-        <div class="icons">
-          <i class="bi bi-star icon" title="Classifique o Produto"></i>
-          <i class="bi bi-heart icon" title="Adicionar aos Favoritos"></i>
-          <i class="bi bi-gift icon" title="Dar de Presente"></i>
-        </div>
+    <div class="product-details">
+      <div class="product-image">
+        <img [src]="item.imagem" alt="Imagem do Produto" class="zoom-image">
       </div>
 
+      <div class="product-info">
+        <h3 class="product-name">{{ item.nome }}</h3>
+        <p class="product-description">{{ item.descritivo }}</p>
 
-      <div class="specifications-button">
-        <div class="spec-title" (click)="toggleSpecifications()">
-          <span class="arrow">▼</span>
-          <span>Especificações Técnicas</span>
+        <div class="pricing">
+          <p class="old-price">De: {{ item.precoAntigo | currency:'BRL':'symbol':'1.2-2' }}</p>
+          <p class="current-price">Por: {{ item.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
+          <p class="pix-price">Ou em 1x de {{ item.preco | currency:'BRL':'symbol':'1.2-2' }} no Pix</p>
+          <div class="icons">
+            <i class="bi bi-star icon" title="Classifique o Produto"></i>
+            <i class="bi bi-heart icon" title="Adicionar aos Favoritos"></i>
+            <i class="bi bi-gift icon" title="Dar de Presente"></i>
+          </div>
         </div>
-        <div class="specifications-content" [style.max-height]="areSpecificationsVisible ? '200px' : '0'">
-          <ul>
-            <li *ngFor="let spec of item.especificacoes">{{ spec }}</li>
-          </ul>
+
+        <div class="specifications-button">
+          <div class="spec-title" (click)="toggleSpecifications()">
+            <span class="arrow">▼</span>
+            <span>Especificações Técnicas</span>
+          </div>
+          <div class="specifications-content" [style.max-height]="areSpecificationsVisible ? '200px' : '0'">
+            <ul>
+              <li *ngFor="let spec of item.especificacoes">{{ spec }}</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="purchase-options" *ngIf="item.quantidade > 0">
-        <button class="buy-button">
-          <i class="bi bi-cart "></i><b>Comprar Produto</b>
-        </button>
-      </div>
-      <div *ngIf="item.quantidade <= 0">
-         <p class="no-stock">Sem estoque <i class="bi bi-emoji-frown"></i></p> 
+
+        <div class="purchase-options" *ngIf="item.quantidade > 0">
+          <button class="buy-button" (click)="adicionarItem(item)">
+            <i class="bi bi-cart"></i><b>Comprar Produto</b>
+          </button>
+        </div>
+
+        <div *ngIf="item.quantidade <= 0">
+          <p class="no-stock">Sem estoque <i class="bi bi-emoji-frown"></i></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="spacer"></div>
+  <div class="spacer"></div>
 </body>

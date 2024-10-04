@@ -5,6 +5,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { LoginComponent } from './login/login.component';
 import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
+import { BuscaComponent } from './busca/busca.component';
 
 
 export const routes: Routes = [
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: "", component: VitrineComponent },
     { path: "cesta", component: CestaComponent},
     { path: "esqueciSenha", component: EsqueciSenhaComponent},
-    { path: "login", component: LoginComponent}
+    { path: "login", component: LoginComponent},
+    { path: "busca", component: BuscaComponent}
 ];

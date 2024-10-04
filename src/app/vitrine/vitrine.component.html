@@ -22,7 +22,7 @@
         <p class="promo-description">{{ produto.nome }}</p>
        
 
-        <button class="buy-button" *ngIf="produto.quantidade > 0" (click)="navigateToDetalhe(produto)">
+        <button class="buy-button" *ngIf="produto.quantidade > 0" (click)="adicionarItem(produto)">
           Comprar
         </button>
       </div>
@@ -48,7 +48,7 @@
 
       <p class="promo-description">{{ produto.nome }}</p>
 
-      <button class="buy-button" *ngIf="produto.quantidade > 0" (click)="navigateToDetalhe(produto)">
+      <button class="buy-button" *ngIf="produto.quantidade > 0" (click)= "adicionarItem(produto)">
         Comprar
       </button>
     </div>

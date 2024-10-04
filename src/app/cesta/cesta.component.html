@@ -1,1 +1,52 @@
-<p>cesta works!</p>
+<div class="spacerDetalhes"></div>
+
+
+    <div class="cesta-header">
+        <div class="icon-background"></div>
+        <i class="bi bi-cart3 icon-carrinho"></i> <!-- Ícone do Bootstrap -->
+        <h2>Cesta de Compras</h2> 
+    </div>
+
+    <div class="content">
+    <table class="cesta-table">
+        <thead>
+            <tr>
+                <th>Cod.</th>
+                <th>Nome</th>
+                <th>Qtd</th>
+                <th>Valor R$</th>
+                <th>Total por item R$</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop para exibir cada item da cesta -->
+            <tr *ngFor="let x of cesta.itens">
+                <td>{{x.codigo}}</td>
+                <td>{{x.produto.nome}}</td>
+                <td>{{x.quantidade}}</td>
+                <td>R$ {{x.produto.valor | number: '1.2-2'}}</td>
+                <td>R$ {{x.valor | number: '1.2-2'}}</td>
+                <td>
+                    <!-- Botão para remover o item da cesta -->
+                    <button class="remove-button" (click)="removerItem(x)">Remover</button>
+                </td>
+            </tr>
+
+            <!-- Linha que exibe o total da cesta -->
+            <tr>
+                <td colspan="4">Total</td>
+                <td>R$ {{cesta.total | number: '1.2-2'}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Botão para limpar toda a cesta -->
+    <button class="clear-button" (click)="limparCesta()">Limpar Cesta</button>
+</div>
+
+<div class="message">
+    <b>{{mensagem}}</b>
+</div>
+<div class="spacer"></div>
