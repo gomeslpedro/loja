@@ -23,6 +23,7 @@
         <br><br>
         <div class="inputComplemento">Complemento:</div> <input type="text" [(ngModel)]="obj.complemento" placeholder="Insira seu complemento se necessário">
         <br><br>
-        <button class="botaoCadastro" (click)="gravar()">Cadastre-se</button>
+        <button class="botaoCadastro" (click)="gravar()">Cadastre-se</button><br>
+        <button class="botaoSair" (click)="logout()">Sair</button>
         <br>
         <b class="mensagem">{{mensagem}}</b>

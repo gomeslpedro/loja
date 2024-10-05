@@ -28,4 +28,9 @@ export class CadastroComponent {
     localStorage.setItem("cliente", JSON.stringify(this.obj));
     this.mensagem = "Cadastro realizado com sucesso!";
   }
+
+  public logout(){
+    localStorage.removeItem("cliente");
+    window.location.href="./login";
+  }
 }

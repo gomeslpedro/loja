@@ -7,8 +7,9 @@
     </div>
     
     <div class="center-content">
-      <input type="text" class="search-bar" placeholder="O que você está procurando? | Pesquise aqui...">
-      <img src="/lupa.png" alt="Pesquisar" class="search-icon">
+      <input type="text" [(ngModel)]="filtro"
+      class="search-bar" placeholder="O que você está procurando? | Pesquise aqui..." (input)="onSearchChange($event)">
+      <img src="/lupa.png" (click)="navigateToBusca()" alt="Pesquisar" class="search-icon">
     </div>
 
     <div class="login-register">
