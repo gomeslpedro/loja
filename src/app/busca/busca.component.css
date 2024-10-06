@@ -3,10 +3,12 @@
 }
 
 .content {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    flex-wrap: wrap;
+    border-top: 3px solid #f1d324;
+    background-color: #3e4255;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .busca-header {
@@ -53,7 +55,7 @@
 }
 
 .nomeItem, .itemDescritivo, .itemValor{
-    color: white;
+    color: black;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
 }
@@ -84,8 +86,9 @@
     margin: 0 6px;
 }
 
-.containerProduto{
+.ngFor-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    justify-content: space-between;
 }

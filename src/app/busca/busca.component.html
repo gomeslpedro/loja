@@ -11,21 +11,22 @@
 </div>
 
 
-
+<div class="ngFor-container">
     <div *ngFor="let item of lista">
         <div *ngIf="item.nome.toLowerCase().indexOf(filtro.toLowerCase())>=0">
-            <div class="nomeItem">
-                <h4>{{item.nome}}</h4>
-            </div>
-                <img src="{{item.imagem}}"
-                width="150px"><br><br>
-                <div class="itemDescritivo">{{item.descritivo}}</div>
-                <br><br>
-                <div class="itemValor">R$ {{item.valor}}</div><br>
-                <button class="botaoDetalhe" (click)="verDetalhe(item)">Ver Mais</button>
-                <button class="botaoCompra" *ngIf="item.quantidade>0" (click)="adicionarItem(item)">Comprar</button>
+            <div class="conteudoProduto">
+                <div class="nomeItem">
+                    <h4>{{item.nome}}</h4>
+                </div>
+                    <img src="{{item.imagem}}"
+                    width="150px"><br><br>
+                    <br><br>
+                    <div class="itemValor">R$ {{item.valor}}</div><br>
+                    <button class="botaoDetalhe" (click)="verDetalhe(item)">Ver Mais</button>
+                    <button class="botaoCompra" *ngIf="item.quantidade>0" (click)="adicionarItem(item)">Comprar</button>
+            </div>   
         </div> 
     </div>
-
+</div>
 
     
