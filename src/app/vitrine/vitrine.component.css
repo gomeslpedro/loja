@@ -139,3 +139,9 @@ body {
     max-height: 1100px; 
     border-radius:10px ;
   }
+
+  @media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+}

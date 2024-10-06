@@ -17,7 +17,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 27px;
-    
 }
 
 .busca-header h2 {
@@ -43,21 +42,38 @@
 
 .content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px;
     flex-wrap: wrap;
 }
 
-.mensagemNaoEncontrou{
+.mensagemNaoEncontrou {
     color: yellow;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
 }
 
-.nomeItem, .itemDescritivo, .itemValor{
-    color: black;
-    font-family: 'Arial', sans-serif;
+.nomeItem, .itemDescritivo {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
+}
+
+.itemValor {
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    color: #e63946;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.old-price {
+    font-family: 'Arial', sans-serif;
+    text-decoration: line-through;
+    color: #999;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
 .botaoCompra, .botaoDetalhe {
@@ -68,14 +84,14 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-right: 10px;
+    margin: 5px; 
 }
 
 .botaoCompra:hover, .botaoDetalhe:hover {
     background-color: #454cb9;
 }
 
-.conteudoProduto{
+.conteudoProduto {
     text-align: center;
     width: 250px;
     background-color: #fff;
@@ -83,12 +99,57 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
-    margin: 0 6px;
-    margin-top: 10px;
+    margin: 10px; 
 }
 
-.ngFor-container{
+.conteudoProduto:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.ngFor-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.bi-search {
+    font-size: 2rem;
+    color: #e4ce0d;
+    position: relative;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.icon-background {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    z-index: -1;
+    left: -45px;
+    top: -10px;
+    opacity: 0.5;
+}
+
+.promo-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
 }

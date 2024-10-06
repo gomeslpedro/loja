@@ -81,7 +81,7 @@ export class VitrineComponent {
         descricao: 'Notebook Dell',
         preco: 8799.90,
         precoAntigo: 8977.90,
-        imagem: '/notebook1.webp',
+        imagem: '/notebook2.png',
         valor: 8799.90,
         descritivo: 'Notebook Dell Latitude 3420 com 512GB SSD, ideal para produtividade e entretenimento.',
         quantidade: 5,
@@ -130,6 +130,7 @@ export class VitrineComponent {
       item.codigo = obj.id;
       item.produto = obj;
       item.quantidade = 1;
+      item.valor = obj.preco; 
       cesta.codigo = 1;
       cesta.total = obj.preco;
       cesta.itens.push(item);

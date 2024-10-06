@@ -74,11 +74,11 @@ export class BuscaComponent {
     },
     {
         id: 5,
-        nome: 'Notebook Dell Latitude 3420 Intel Core i5 1135G7 14"',
+        nome: 'Notebook Dell Latitude 3420 Intel Core i5 1135G7...',
         descricao: 'Notebook Dell',
         preco: 8799.90,
         precoAntigo: 8977.90,
-        imagem: '/notebook.jpg',
+        imagem: '/notebook2.png',
         valor: 8799.90,
         descritivo: 'O Notebook Dell Latitude 3420 Intel Core i5 1135G7 14" 8GB SSD 256 GB Windows 10 Leitor Biométrico da Dell vem com o sistema operacional Windows 10. Quanto às dimensões, o 3420 tem 32.6cm de largura, 22.6cm de profundidade e 1.76cm de altura, pesando 1.52kg. O 3420 da Dell tem tela de 14.0" e resolução HD.',
         quantidade: 5,
@@ -86,7 +86,7 @@ export class BuscaComponent {
     },
     {
         id: 6,
-        nome: 'Notebook Dell Latitude 3420 Intel Core i5 1135G7 14" 512GB SSD Windows 10 Leitor Biométrico',
+        nome: 'Notebook Dell Latitude 3420 Intel Core i5 1135G7',
         descricao: 'Notebook Dell',
         preco: 8799.90,
         precoAntigo: 8977.90,
@@ -98,7 +98,7 @@ export class BuscaComponent {
     },
     {
         id: 7,
-        nome: 'Celular Samsung Galaxy S23 5G, 512GB, 8GB RAM, Câmera Tripla 50MP+12+10, Tela Infinita de 6.1"',
+        nome: 'Celular Samsung Galaxy S23 5G, 512GB, 8GB RAM..."',
         descricao: 'Celular Samsung',
         preco: 5499.90,
         precoAntigo: 5799.90,
@@ -110,7 +110,7 @@ export class BuscaComponent {
     },
     {
         id: 8,
-        nome: 'Cadeira Gamer - Base Giratória, Braço Ajustável e Sistema de Inclinação Avançado',
+        nome: 'Cadeira Gamer - Base Giratória, Braço Ajustável...',
         descricao: 'Cadeira 2',
         preco: 599.90,
         precoAntigo: 679.90,
@@ -172,5 +172,4 @@ export class BuscaComponent {
     window.location.href = "./cesta";
   }
 
-  
 }
