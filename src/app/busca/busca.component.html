@@ -1,21 +1,31 @@
-<h4>{{mensagem}}</h4>
-
-
-
-<h3 class="produtos" *ngIf="lista.length<=0">
-não foram encontrados produtos em sua pesquisa</h3>
-
-
-
-<div *ngFor="let item of lista">
-<div *ngIf="item.descritivo.toLowerCase().indexOf(filtro.toLowerCase())>=0">
-<h4>{{item.nome}}</h4>
-<img src="{{item.imagem}}"
-width="150px"><br>
-{{item.descritivo}}
-<br><br>
-R$ {{item.valor}}
-<button (click)="verDetalhe(item)">Ver Mais</button>
-<button *ngIf="item.quantidade>0" (click)="adicionarItem(item)">Comprar</button>
-</div>    
+<div class="spacer"></div>
+<div class="content">
+    <div class="busca">
+        <div class="busca-header">
+            <h2>Busca</h2>
+        </div>
+<div class="mensagemNaoEncontrou">
+    <h3 class="produtos" *ngIf="lista.length===0">
+    Não foram encontrados produtos em sua pesquisa
+    </h3>
 </div>
+
+
+
+    <div *ngFor="let item of lista">
+        <div *ngIf="item.nome.toLowerCase().indexOf(filtro.toLowerCase())>=0">
+            <div class="nomeItem">
+                <h4>{{item.nome}}</h4>
+            </div>
+                <img src="{{item.imagem}}"
+                width="150px"><br><br>
+                <div class="itemDescritivo">{{item.descritivo}}</div>
+                <br><br>
+                <div class="itemValor">R$ {{item.valor}}</div><br>
+                <button class="botaoDetalhe" (click)="verDetalhe(item)">Ver Mais</button>
+                <button class="botaoCompra" *ngIf="item.quantidade>0" (click)="adicionarItem(item)">Comprar</button>
+        </div> 
+    </div>
+
+
+    

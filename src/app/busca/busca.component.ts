@@ -18,14 +18,9 @@ export class BuscaComponent {
   ngOnInit(){
     this.sharedService.currentSearchTerm.subscribe(term => {
       this.searchTerm = term;
-      this.applySearchLogic();
+      this.filtro = this.searchTerm;
     })
   }
-  
-    applySearchLogic() {
-      console.log("Aplicando lógica de busca para:");
-    }
-  
   
   searchTerm: string = ''; 
   public mensagem: string="";
@@ -139,7 +134,7 @@ export class BuscaComponent {
     let jsonCliente = localStorage.getItem("cliente");
     let cesta: Cesta = new Cesta();
     let item: Item = new Item();
-    if(json==null){      //CESTA NAO EXISTE     
+    if(json==null){          
         item.codigo=obj.id;
         item.produto=obj;
         item.quantidade=1;
@@ -148,18 +143,18 @@ export class BuscaComponent {
         cesta.total = obj.valor;
         cesta.itens.push(item);          
         if(jsonCliente!=null) cesta.cliente = JSON.parse(jsonCliente);          
-    } else {  //CESTA EXISTE
+    } else {  
       let achou = false;
       cesta = JSON.parse(json);
       for(let i=0; i<cesta.itens.length; i++){
-        if(cesta.itens[i].codigo==obj.id){  //ITEM JA EXISTE
+        if(cesta.itens[i].codigo==obj.id){  
           cesta.itens[i].quantidade = cesta.itens[i].quantidade + 1;
           cesta.itens[i].valor =  cesta.itens[i].quantidade * cesta.itens[i].produto.valor;
           achou = true;
           break;
         }            
       }
-      if(!achou){  //ITEM NAO EXISTE
+      if(!achou){  
         item.codigo=obj.id;
         item.produto=obj;
         item.quantidade=1;
@@ -168,7 +163,7 @@ export class BuscaComponent {
       }
     }
 
-    cesta.total = 0; //ATUALIZA O VALOR TOTAL DA CESTA
+    cesta.total = 0; 
     for(let i=0; i<cesta.itens.length; i++){
       cesta.total= cesta.itens[i].valor + cesta.total;
     }

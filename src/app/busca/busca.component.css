@@ -1,0 +1,91 @@
+.spacer {
+    height: 65px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.busca-header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+    
+}
+
+.busca-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e2e2e2;
+    margin-left: 15px;
+    display: inline-block;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.busca-header h2::before {
+    content: '';
+    width: 60px;
+    height: 6px;
+    background-color: #ffc107;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.mensagemNaoEncontrou{
+    color: yellow;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.nomeItem, .itemDescritivo, .itemValor{
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.botaoCompra, .botaoDetalhe {
+    background-color: #596dc7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.botaoCompra:hover, .botaoDetalhe:hover {
+    background-color: #454cb9;
+}
+
+.conteudoProduto{
+    text-align: center;
+    width: 17%; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin: 0 6px;
+}
+
+.containerProduto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -14,8 +14,6 @@ import { CommonModule } from '@angular/common';
 
 export class HeaderComponent {
 
-  public filtro: string="";
-  
   constructor(
     private router: Router,
     private sharedService: SharedService
