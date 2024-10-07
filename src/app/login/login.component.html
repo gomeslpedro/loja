@@ -5,8 +5,10 @@
             <h2>Login</h2>
         </div>
         <br>
-        <div class="inputEmail">E-mail:</div> <input type="email" [(ngModel)]="obj.email" placeholder="Digite o e-mail utilizado no cadastro." required><br><br>
-        <div class="inputSenha">Senha:</div> <input type="password" [(ngModel)]="obj.senha" placeholder="Digite sua senha." required>
+        <div class="inputEmail">E-mail:</div> <br>
+        <input type="email" [(ngModel)]="obj.email" placeholder="Digite o e-mail utilizado no cadastro." required><br><br>
+        <div class="inputSenha">Senha:</div> <br>
+        <input type="password" [(ngModel)]="obj.senha" placeholder="Digite sua senha." required>
         <br><br>
         <button class="botaoLogin" (click)="fazerLogin()">Entrar</button>
         <br>
