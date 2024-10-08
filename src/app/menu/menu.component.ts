@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-
+    menuOpen = false;
+  
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+    }
 }

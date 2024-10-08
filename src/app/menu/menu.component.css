@@ -7,40 +7,52 @@
     left: 0;
     width: 100%;
     z-index: 4;
-
-}
-
-.navbar-menu {
+  }
+  
+  .navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .navbar-menu {
     list-style: none;
     display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-}
-
-.navbar-menu li {
+  }
+  
+  .navbar-menu li {
     position: relative;
     margin: 0;
-}
-
-.navbar-menu a {
+  }
+  
+  .navbar-menu a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     display: block;
     padding: 5px 10px;
-    
-
-}
-
-.navbar-menu a:hover {
+  }
+  
+  .navbar-menu a:hover {
     background-color: #555;
     border-radius: 10px;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
-}
-
-.submenu {
+  }
+  
+  .submenu {
     display: none;
     position: absolute;
     top: 100%;
@@ -52,28 +64,66 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-.submenu li {
+  }
+  
+  .submenu li {
     width: 200px;
-}
-
-.submenu a {
+  }
+  
+  .submenu a {
     padding: 10px;
-}
-
-.navbar-menu li:hover .submenu {
+  }
+  
+  .navbar-menu li:hover .submenu {
     display: block;
-}
-
-.navbar-menu .active a {
+  }
+  
+  .navbar-menu .active a {
     background-color: #555;
     border-radius: 10px;
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    .content {
-        padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-menu {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+      background-color: #333;
+      transition: background-color 0.3s ease, border-radius 0.3s ease;
     }
-}
+  
+    .navbar-menu.show {
+        
+      display: flex;
+    }
+  
+    .navbar-menu li {
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .submenu {
+      position: static;
+      box-shadow: none;
+    }
+  
+    .navbar-menu li:hover .submenu {
+      display: none;
+    }
+  
+    .navbar-menu li {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .submenu a {
+      text-align: center;
+      display: block;
+      padding: 10px;
+    }
+  }
+  

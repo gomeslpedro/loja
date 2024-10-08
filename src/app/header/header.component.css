@@ -35,7 +35,7 @@
 }
 
 .site-title-highlight {
-    color: #596dc7 
+    color: #596dc7;
 }
 
 .site-title:hover {
@@ -43,10 +43,11 @@
     transition: background-color 0.3s ease, border-color 0.20s ease;
 }
 
-.site-title-highlight:hover{
+.site-title-highlight:hover {
     color: #e9e63f;
     transition: background-color 0.3s ease, border-color 0.20s ease;
 }
+
 .center-content {
     flex: 1;
     display: flex;
@@ -90,17 +91,17 @@
 
 .login-register {
     display: flex;
-    align-items: center; 
-    margin-left: 20px; 
+    align-items: center;
+    margin-left: 20px;
 }
 
 .register-link {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     text-decoration: none;
     color: white;
-    margin-right: 20px; 
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -120,7 +121,7 @@
 }
 
 .register-link:hover .register-text {
-    color: #6071d1;;
+    color: #6071d1;
 }
 
 .register-link:hover .register-subtext {
@@ -135,12 +136,27 @@
 }
 
 .login-icon:hover {
-    filter: hue-rotate(180deg) saturate(200%) brightness(69%);
-    
+    filter: hue-rotate(180deg) saturate(200%) brightness(83%);
 }
 
+
 @media (max-width: 768px) {
+    .site-title,
+    .register-link {
+        display: none; 
+    }
+
+    .search-bar  {
+        width: 80%; 
+        margin: 0;
+    }
+
+
+    .search-icon {
+        position: absolute; /* Posiciona o ícone de forma absoluta */
+        right: 115px;
+    }
     .header {
-        padding: 10px;
+        justify-content: space-between;
     }
 }

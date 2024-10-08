@@ -144,4 +144,26 @@ body {
     .content {
         padding: 10px;
     }
+
+    .body {
+        height: auto;
+        align-items: center;   
+    }
+
+   
+
+    .promo-content {
+        display: flex;                  /* Habilita o uso de Flexbox */
+        flex-wrap: wrap;               /* Permite que os itens envolvam */
+        justify-content: space-between; /* Espaço igual entre os itens */
+        align-items: center;           /* Alinha os itens no centro verticalmente */
+        width: 100%;                   /* Ajusta a largura do contêiner */
+        padding: 10;
+        margin-left: 100px;                    /* Remove padding se necessário */
+    }
+
+    .promo-content > div {             /* Seleciona os itens dentro do promo-content */
+        flex: 0 0 48%;                /* Ajusta a largura de cada item para ocupar 48% */
+        margin-bottom: 10px;          /* Espaço entre as linhas */
+    }
 }

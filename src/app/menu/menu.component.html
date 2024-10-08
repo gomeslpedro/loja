@@ -1,22 +1,24 @@
 <nav class="navbar">
-    <ul class="navbar-menu">
-      <li><a href="#">Home</a></li>
-      <li>
-        <a href="#">Produtos</a>
-        <ul class="submenu">
-          <li><a href="#promo">Promoções</a></li>
-          <li><a href="#new">Novidades</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#contato">Sobre</a>
-        <ul class="submenu">
-          <li><a href="#contato">Sobre nós</a></li>
-          <li><a href="#contato">Equipe</a></li>
-        </ul>
-      </li>
-      <li><a href="#contato">Contato</a></li>
-      <li><a href="./cesta">Cesta</a></li>
-    </ul>
-  </nav>
-  
+  <div class="navbar-brand">
+    <button class="hamburger" (click)="toggleMenu()">&#9776;</button>
+  </div>
+  <ul class="navbar-menu" [class.show]="menuOpen">
+    <li><a href="#">Home</a></li>
+    <li>
+      <a href="./busca">Produtos</a>
+      <ul class="submenu">
+        <li><a href="#promo">Promoções</a></li>
+        <li><a href="#new">Novidades</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#contato">Sobre</a>
+      <ul class="submenu">
+        <li><a href="#contato">Sobre nós</a></li>
+        <li><a href="#contato">Equipe</a></li>
+      </ul>
+    </li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="./cesta">Cesta</a></li>
+  </ul>
+</nav>
