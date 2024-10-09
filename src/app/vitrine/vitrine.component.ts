@@ -25,7 +25,7 @@ export class VitrineComponent {
         valor: 700.00,
         descritivo: 'A TGT Sight FA é um produto ideal se você está procurando uma cadeira gamer com ótima qualidade e custo benefício. Seu assento utiliza espuma regular, sua base é de ferro e além disso, ela utiliza um pistão de alta durabilidade, tudo para que você se sinta confortável independente se vai passar horas jogando ou trabalhando',
         quantidade: 2,
-        especificacoes: ['Cor: Azul', 'Tamanho: M', 'Material: Algodão']
+        especificacoes: ['Cor: Vermelho', 'Tamanho: Médio', 'Material: Couro Sintético']
     },
     {
         id: 2,
@@ -61,7 +61,7 @@ export class VitrineComponent {
         valor: 536.99,
         descritivo: 'Tênis Nike ideal para prática de esportes e uso diário, oferecendo conforto e estilo. É um novo tênis do modelo que combina o conforto Nike com um estilo inovador.',
         quantidade: 0,
-        especificacoes: ['Sensor: Pixart 3389', 'Peso: 85g', 'Dimensões: 12,7 × 6,6 × 4 cm']
+        especificacoes: ['Marca: Nike', 'Modelo: Mc Trainer 2', 'Cor: Preto']
     },
     {
         id: 5,
@@ -73,7 +73,7 @@ export class VitrineComponent {
         valor: 8799.90,
         descritivo: 'O Notebook Dell Latitude 3420 Intel Core i5 1135G7 14" 8GB SSD 256 GB Windows 10 Leitor Biométrico da Dell vem com o sistema operacional Windows 10. Quanto às dimensões, o 3420 tem 32.6cm de largura, 22.6cm de profundidade e 1.76cm de altura, pesando 1.52kg. O 3420 da Dell tem tela de 14.0" e resolução HD.',
         quantidade: 5,
-        especificacoes: ['Sensor: Pixart 3389', 'Peso: 85g', 'Dimensões: 12,7 × 6,6 × 4 cm']
+        especificacoes: ['Marca: Dell', 'Peso: 120g', 'Processador: Intel i5']
     },
     {
         id: 6,
@@ -85,7 +85,7 @@ export class VitrineComponent {
         valor: 8799.90,
         descritivo: 'Notebook Dell Latitude 3420 com 512GB SSD, ideal para produtividade e entretenimento.',
         quantidade: 5,
-        especificacoes: ['Sensor: Pixart 3389', 'Peso: 85g', 'Dimensões: 12,7 × 6,6 × 4 cm']
+        especificacoes: ['Marca: Dell', 'Peso: 110g', 'Modelo: Latitude 3420']
     },
     {
         id: 7,
@@ -97,7 +97,7 @@ export class VitrineComponent {
         valor: 5499.90,
         descritivo: 'Smartphone Samsung Galaxy S23 5G com excelente desempenho e câmera de alta qualidade.',
         quantidade: 5,
-        especificacoes: ['Sensor: Pixart 3389', 'Peso: 85g', 'Dimensões: 12,7 × 6,6 × 4 cm']
+        especificacoes: ['Marca: Samsung', 'Peso: 87g', 'Modelo: Galaxy']
     },
     {
         id: 8,
@@ -109,7 +109,7 @@ export class VitrineComponent {
         valor: 599.90,
         descritivo: 'Conforto, estilo e qualidade para seus momentos de jogos! A Cadeira Gamer Grifit é a escolha ideal para os amantes de games que buscam uma experiência de jogo excepcional.',
         quantidade: 5,
-        especificacoes: ['Sensor: Pixart 3389', 'Peso: 85g', 'Dimensões: 12,7 × 6,6 × 4 cm']
+        especificacoes: ['Cor: Preta', 'Tamanho: Médio', 'Material: Couro']
     }
 ];
 

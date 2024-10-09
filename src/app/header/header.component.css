@@ -153,7 +153,7 @@
 
 
     .search-icon {
-        position: absolute; /* Posiciona o ícone de forma absoluta */
+        position: absolute; 
         right: 115px;
     }
     .header {
