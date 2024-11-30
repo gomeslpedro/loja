@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Cliente } from '../model/cliente';
 import { FormsModule } from '@angular/forms';
-
+import { ClienteService } from '../service/cliente.service';
 
 @Component({
   selector: 'app-login',
@@ -12,15 +11,25 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  public obj: Cliente = new Cliente();
-  public mensagem: String = "";
+  obj = {
+    email: '',
+    senha: ''
+  };
 
-  public fazerLogin(){
-    if(this.obj.email=='felipe@felipe.com.br' && this.obj.senha=='123456'){
-      localStorage.setItem("cliente", JSON.stringify(this.obj));
-      window.location.href="./vitrine";
-    } else {
-      this.mensagem = "Email ou senha inválidos!";
-    }
+  mensagem: string = ''; 
+
+  constructor(private clienteService: ClienteService) {}
+
+  fazerLogin() {
+    this.clienteService.validarLogin(this.obj.email, this.obj.senha).subscribe(
+      (response) => {
+        this.mensagem = 'Login bem-sucedido!';
+        alert(this.mensagem);
+      },
+      (error) => {
+        this.mensagem = 'Credenciais inválidas. Tente novamente.';
+        alert(this.mensagem);
+      }
+    );
   }
 }

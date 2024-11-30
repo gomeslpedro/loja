@@ -5,34 +5,81 @@
             <h2>Cadastro</h2>
         </div>
         <br>
-        <div class="inputNome">Nome:</div> <br>
-        <input type="text" [(ngModel)]="obj.nome" placeholder="Insira seu nome completo" required>
-        <br><br>
-        <div class="inputEmail">E-mail:</div> <br>
-        <input type="email" [(ngModel)]="obj.email" placeholder="Insira seu email" required>
-        <br><br>
-        <div class="inputSenha">Senha:</div> <br>
-        <input type="password" [(ngModel)]="obj.senha" placeholder="Insira sua senha" required>
-        <br><br>
-        <div class="inputTelefone">Telefone:</div> <br>
-        <input type="text" [(ngModel)]="obj.telefone" placeholder="Insira seu telefone" required>
-        <br><br>
-        <div class="inputDocumento">Documento:</div> <br>
-        <input type="text" [(ngModel)]="obj.documento" placeholder="Insira seu documento" required>
-        <br><br>
-        <div class="inputLogradouro">Logradouro:</div> <br>
-        <input type="text" [(ngModel)]="obj.logradouro" placeholder="Insira seu logradouro" required>
-        <br><br>
-        <div class="inputCep">CEP:</div> <br>
-        <input type="text" [(ngModel)]="obj.cep" placeholder="Insira seu CEP | Exemplo: 00000-000" required>
-        <br><br>
-        <div class="inputCidade">Cidade:</div> <br>
-        <input type="text" [(ngModel)]="obj.cidade" placeholder="Insira sua cidade" required>
-        <br><br>
-        <div class="inputComplemento">Complemento:</div> <br>
-        <input type="text" [(ngModel)]="obj.complemento" placeholder="Insira seu complemento se necessário">
-        <br><br>
-        <button class="botaoCadastro" (click)="gravar()">Cadastre-se</button><br>
+        <form #cadastroForm="ngForm" (ngSubmit)="gravar(cadastroForm)">
+
+            <div class="inputNome">Nome:</div> <br>
+            <input type="text" [(ngModel)]="obj.nome" name="nome" placeholder="Insira seu nome completo" required #nome="ngModel">
+            <div *ngIf="nome.invalid && nome.touched" class="error-message">
+                Nome é obrigatório.
+            </div>
+            <br><br>
+
+            <div class="inputEmail">E-mail:</div> <br>
+            <input type="email" [(ngModel)]="obj.email" name="email" placeholder="Insira seu email" required #email="ngModel">
+            <div *ngIf="email.invalid && email.touched" class="error-message">
+                E-mail é obrigatório e deve ser válido.
+            </div>
+            <br><br>
+
+            <div class="inputSenha">Senha:</div> <br>
+            <input type="password" [(ngModel)]="obj.senha" name="senha" placeholder="Insira sua senha" required #senha="ngModel">
+            <div *ngIf="senha.invalid && senha.touched" class="error-message">
+                Senha é obrigatória.
+            </div>
+            <br><br>
+
+            <div class="inputTelefone">Telefone:</div> <br>
+            <input type="text" [(ngModel)]="obj.telefone" name="telefone" placeholder="Insira seu telefone" required #telefone="ngModel">
+            <div *ngIf="telefone.invalid && telefone.touched" class="error-message">
+                Telefone é obrigatório.
+            </div>
+            <br><br>
+
+            <div class="inputDocumento">Documento:</div> <br>
+            <input type="text" [(ngModel)]="obj.documento" name="documento" placeholder="Insira seu documento" required #documento="ngModel">
+            <div *ngIf="documento.invalid && documento.touched" class="error-message">
+                Documento é obrigatório.
+            </div>
+            <br><br>
+
+            <div class="inputLogradouro">Logradouro:</div> <br>
+            <input type="text" [(ngModel)]="obj.logradouro" name="logradouro" placeholder="Insira seu logradouro" required #logradouro="ngModel">
+            <div *ngIf="logradouro.invalid && logradouro.touched" class="error-message">
+                Logradouro é obrigatório.
+            </div>
+            <br><br>
+
+            <div class="inputCep">CEP:</div> <br>
+            <input type="text" [(ngModel)]="obj.cep" name="cep" placeholder="Insira seu CEP | Exemplo: 00000-000" required #cep="ngModel">
+            <div *ngIf="cep.invalid && cep.touched" class="error-message">
+                CEP é obrigatório.
+            </div>
+            <br><br>
+
+            <div class="inputCidade">Cidade:</div> <br>
+            <input type="text" [(ngModel)]="obj.cidade" name="cidade" placeholder="Insira sua cidade" required #cidade="ngModel">
+            <div *ngIf="cidade.invalid && cidade.touched" class="error-message">
+                Cidade é obrigatória.
+            </div>
+            <br><br>
+
+            <div class="inputComplemento">Complemento:</div> <br>
+            <input type="text" [(ngModel)]="obj.complemento" name="complemento" placeholder="Insira seu complemento se necessário">
+            <br><br>
+
+            <button class="botaoCadastro" type="submit" [disabled]="cadastroForm.invalid">Cadastre-se</button><br>
+        </form>
+
         <button class="botaoSair" (click)="logout()">Sair</button>
         <br>
-        <b class="mensagem">{{mensagem}}</b>
+
+        <div *ngIf="cadastroForm.invalid && cadastroForm.touched" class="error-message">
+            Por favor, preencha todos os campos obrigatórios corretamente.
+        </div>
+
+        <div *ngIf="mensagem" class="error-message">
+            {{ mensagem }}
+        </div>
+    </div>
+    
+</div>

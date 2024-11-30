@@ -5,23 +5,47 @@
             <h2>Login</h2>
         </div>
         <br>
-        <div class="inputEmail">E-mail:</div> <br>
-        <input type="email" [(ngModel)]="obj.email" placeholder="Digite o e-mail utilizado no cadastro." required><br><br>
-        <div class="inputSenha">Senha:</div> <br>
-        <input type="password" [(ngModel)]="obj.senha" placeholder="Digite sua senha." required>
+        
+        <label for="email" class="inputEmail">E-mail:</label>
+        <br>
+        <input
+            id="email"
+            type="email"
+            [(ngModel)]="obj.email"
+            placeholder="Digite o e-mail utilizado no cadastro."
+            required
+        />
         <br><br>
+
+        <label for="senha" class="inputSenha">Senha:</label>
+        <br>
+        <input
+            id="senha"
+            type="password"
+            [(ngModel)]="obj.senha"
+            placeholder="Digite sua senha."
+            required
+        />
+        <br><br>
+
+       
         <button class="botaoLogin" (click)="fazerLogin()">Entrar</button>
         <br>
-        <b class="mensagem">{{mensagem}}</b>
+
+        <b class="mensagem">{{ mensagem }}</b>
+        <br>
+
         <div class="esqueciSenha">
             <a class="esqueciSenha-link" href="./esqueciSenha">
                 <div class="esqueciSenha-text">Esqueceu sua senha? Clique aqui!</div>
             </a>
         </div>
         <br>
+
         <div class="cadastro">
             <a class="cadastro-link" href="./cadastro">
                 <div class="cadastro-text">Cadastre-se agora!</div>
             </a>
         </div>
-        
+    </div>
+</div>

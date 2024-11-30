@@ -17,7 +17,6 @@ body {
     background-color: #3e4255;
     margin: 40px 0;
     border-radius: 10px;
-    margin: 40px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -35,7 +34,26 @@ body {
     background-color: #423e47;
     padding: 15px;
     text-align: center;
-    border-top: 3px solid #e7d807;
+    position: relative;
+    border-top: 4px solid transparent; 
+    border-image: linear-gradient(135deg, 
+        #ffeb3b, 
+        #ffc107, 
+        #ff9800, 
+        #f57c00,
+        #ff5722) 1; 
+        animation: borderAnimation 4s linear infinite;
+}
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(135deg, #ffeb3b, #ffc107, #ff9800, #f57c00, #ffeb3b);
+    }
+    50% {
+        border-image-source: linear-gradient(135deg, #f57c00, #ffeb3b, #ffc107, #ff9800, #ff5722);
+    }
+    100% {
+        border-image-source: linear-gradient(135deg, #ffeb3b, #f57c00, #ffeb3b, #ffc107, #ffeb3b);
+    }
 }
 
 .promo-header h2 {
@@ -44,6 +62,62 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 28px;
     text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.promo-header h2::before {
+    content: '';
+    width: 60px;
+    height: 6px;
+    background-color: #ffc107; 
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 10px;
+}
+
+
+.countdown-timer{
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.bi-clock{
+    color: rgb(231, 199, 15);
+    font-size: 16px;
+    padding-right: 7px;
+}
+
+.icon-clock {
+    font-size: 3rem;
+    color: #e4ce0d;
+    position: absolute;
+    animation: bounce 1s infinite alternate;
+    left: -45px;
+    top: -10px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.icon-background {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    z-index: -1;
+    left: -45px;
+    top: -10px;
+    opacity: 0.5;
 }
 
 .promo-content {
@@ -51,7 +125,6 @@ body {
     justify-content: space-between;
     padding-top: 20px;
 }
-
 
 .promo-item {
     text-align: center;
@@ -62,7 +135,6 @@ body {
     padding: 20px;
     transition: transform 0.3s ease;
     margin: 0 6px; 
-    
 }
 
 .promo-item:hover {
@@ -126,21 +198,20 @@ body {
     position: relative;
 }
 
-
 .banner-container {
     text-align: center;
     margin-top: 30px; 
     margin-bottom: 70px;
-  }
-  
-  .banner-img {
+}
+
+.banner-img {
     width: 100%; 
     height: auto;
     max-height: 1100px; 
-    border-radius:10px ;
-  }
+    border-radius: 10px;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .content {
         padding: 10px;
     }
@@ -150,20 +221,18 @@ body {
         align-items: center;   
     }
 
-   
-
     .promo-content {
-        display: flex;                  /* Habilita o uso de Flexbox */
-        flex-wrap: wrap;               /* Permite que os itens envolvam */
-        justify-content: space-between; /* Espaço igual entre os itens */
-        align-items: center;           /* Alinha os itens no centro verticalmente */
-        width: 100%;                   /* Ajusta a largura do contêiner */
+        display: flex;                 
+        flex-wrap: wrap;              
+        justify-content: space-between; 
+        align-items: center;           
+        width: 100%;                    
         padding: 10;
-        margin-left: 100px;                    /* Remove padding se necessário */
+        margin-left: 100px;                    
     }
 
-    .promo-content > div {             /* Seleciona os itens dentro do promo-content */
-        flex: 0 0 48%;                /* Ajusta a largura de cada item para ocupar 48% */
-        margin-bottom: 10px;          /* Espaço entre as linhas */
+    .promo-content > div {             
+        flex: 0 0 48%;                
+        margin-bottom: 10px;          
     }
 }
