@@ -23,8 +23,11 @@ export class LoginComponent {
   fazerLogin() {
     this.clienteService.validarLogin(this.obj.email, this.obj.senha).subscribe(
       (response) => {
+        
+        localStorage.setItem('cliente', JSON.stringify(response));
         this.mensagem = 'Login bem-sucedido!';
         alert(this.mensagem);
+        window.location.href = './cesta'; 
       },
       (error) => {
         this.mensagem = 'Credenciais inválidas. Tente novamente.';
