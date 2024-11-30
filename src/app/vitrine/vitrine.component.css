@@ -41,12 +41,12 @@ body {
         #ffc107, 
         #ff9800, 
         #f57c00,
-        #ff5722) 1; 
+        #f57c00) 1; 
         animation: borderAnimation 4s linear infinite;
 }
 @keyframes borderAnimation {
     0% {
-        border-image-source: linear-gradient(135deg, #ffeb3b, #ffc107, #ff9800, #f57c00, #ffeb3b);
+        border-image-source: linear-gradient(135deg, #ffeb3b, #f57c00, #ffeb3b, #f57c00, #ffeb3b);
     }
     50% {
         border-image-source: linear-gradient(135deg, #f57c00, #ffeb3b, #ffc107, #ff9800, #ff5722);
@@ -209,6 +209,13 @@ body {
     height: auto;
     max-height: 1100px; 
     border-radius: 10px;
+}
+
+.vazio {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {

@@ -22,15 +22,16 @@ export class CadastroComponent {
       alert(this.mensagem);
       return;
     }
+  
     this.service.inserir(this.obj).subscribe(
       (response) => {
         this.mensagem = 'Cadastro realizado com sucesso!';
-        console.log('Resposta do servidor:', response); 
+        console.log('Resposta do servidor:', response);
         alert(this.mensagem);
       },
       (error) => {
-        console.error('Erro na requisição:', error); 
-        this.mensagem = `Erro ao cadastrar: ${error.error.message || error.message}`;
+        console.error('Erro na requisição:', error);
+        this.mensagem = error.error || `Erro ao cadastrar: ${error.message}`;
         alert(this.mensagem);
       }
     );
