@@ -1,4 +1,4 @@
-body {
+body { 
     background-color: #1f1f31;
 }
 
@@ -42,8 +42,9 @@ body {
         #ff9800, 
         #f57c00,
         #f57c00) 1; 
-        animation: borderAnimation 4s linear infinite;
+    animation: borderAnimation 4s linear infinite;
 }
+
 @keyframes borderAnimation {
     0% {
         border-image-source: linear-gradient(135deg, #ffeb3b, #f57c00, #ffeb3b, #f57c00, #ffeb3b);
@@ -77,14 +78,14 @@ body {
     border-radius: 10px;
 }
 
-
-.countdown-timer{
+.countdown-timer {
     color: white;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
 }
-.bi-clock{
+
+.bi-clock {
     color: rgb(231, 199, 15);
     font-size: 16px;
     padding-right: 7px;
@@ -215,7 +216,6 @@ body {
     color: white;
     font-family: 'Arial', sans-serif;
     font-size: 17px;
-    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -223,23 +223,37 @@ body {
         padding: 10px;
     }
 
-    .body {
-        height: auto;
-        align-items: center;   
-    }
-
     .promo-content {
         display: flex;                 
         flex-wrap: wrap;              
-        justify-content: space-between; 
-        align-items: center;           
-        width: 100%;                    
-        padding: 10;
-        margin-left: 100px;                    
+        justify-content: space-around; 
+        align-items: center;          
+        width: 100%;                   
+        padding: 10px;
+        margin-left: 0;               
     }
 
     .promo-content > div {             
-        flex: 0 0 48%;                
+        flex: 0 0 48%;                 
         margin-bottom: 10px;          
+    }
+
+    .promo-item {
+        width: 100%;                  
+        margin-bottom: 20px;          
+        padding: 15px;                
+    }
+
+    .promo-header h2 {
+        font-size: 24px;             
+    }
+
+    .promo-item .promo-description {
+        font-size: 14px;             
+    }
+
+    .buy-button {
+        font-size: 14px;             
+        padding: 8px 15px;            
     }
 }

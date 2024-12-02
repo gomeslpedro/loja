@@ -1,15 +1,28 @@
 <div class="spacer"></div>
+
 <div class="content">
-    <div class="esqueciSenha">
-        <div class="esqueciSenha-header">
-            <h2>Esqueci a minha senha</h2>
-        </div>
-        <br>
-        <div class="inputEmail">E-mail:</div> <br>
-        <input type="email" [(ngModel)]="obj.email" placeholder="Digite o e-mail utilizado no cadastro." required><br><br>
-        <div class="inputDocumento">Documento:</div> <br>
-        <input type="text" [(ngModel)]="obj.documento" placeholder="Digite seu documento." required>
-        <br><br>
-        <button class="botaoEsqueci" (click)="enviarSenha()">Reenviar senha</button>
-        <br>
-        <b class="mensagem">{{mensagem}}</b>
+  <div class="esqueciSenha">
+    <div class="esqueciSenha-header">
+      <h2>Esqueci Minha Senha</h2>
+    </div>
+    <form (ngSubmit)="reenviarSenha()">
+      <label for="email" class="inputEmail">E-mail:</label>
+      <br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+        placeholder="Digite seu e-mail cadastrado"
+      />
+      <br />
+      <button type="submit" class="botaoEsqueci">Reenviar Senha</button>
+    </form>
+    <div *ngIf="mensagem" class="mensagem">
+      {{ mensagem }}
+    </div>
+  </div>
+</div>
+
+<div class="spacer"></div>

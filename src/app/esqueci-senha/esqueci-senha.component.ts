@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { Cliente } from '../model/cliente';
-import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Cliente } from '../model/cliente';
+import { ClienteService } from '../service/cliente.service';
+
 
 @Component({
   selector: 'app-esqueci-senha',
@@ -11,10 +14,25 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './esqueci-senha.component.css'
 })
 export class EsqueciSenhaComponent {
-  public mensagem: String = "";
-  public obj: Cliente = new Cliente();
+  email: string = '';
+  mensagem: string = '';
 
-  public enviarSenha(){
-    this.mensagem="Um email de recuperação de senha foi enviado, verifique sua caixa de entrada!"
+  constructor(private http: HttpClient) {}
+
+  reenviarSenha() {
+    if (this.email) {
+      this.http
+        .post('http://localhost:8090/api/clientes/esqueci-senha', { email: this.email }, { responseType: 'text' })
+        .subscribe({
+          next: (res) => {
+            this.mensagem = 'E-mail enviado com sucesso! Verifique sua caixa de entrada.';
+          },
+          error: (err) => {
+            this.mensagem = 'Erro ao enviar e-mail. Verifique se o e-mail está correto.';
+          },
+        });
+    } else {
+      this.mensagem = 'Por favor, insira um e-mail válido.';
+    }
   }
 }

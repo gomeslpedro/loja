@@ -1,4 +1,3 @@
-
 .spacer{
     height: 65px;
 }
@@ -84,7 +83,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 27px;
-    
 }
 
 .cesta-header h2 {
@@ -148,5 +146,26 @@
 @media (max-width: 768px) {
     .content {
         padding: 10px;
+    }
+
+    .cesta-table {
+        font-size: 14px;
+    }
+
+    .cesta-table th, .cesta-table td {
+        padding: 8px;
+    }
+
+    .remove-button, .clear-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .cesta-header h2 {
+        font-size: 2rem;
+    }
+
+    .cesta-header .icon-carrinho {
+        font-size: 2rem;
     }
 }

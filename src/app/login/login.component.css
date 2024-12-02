@@ -16,6 +16,7 @@
     margin: 40px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 700px;
+    max-width: 100%;
 }
 
 .login-header {
@@ -33,11 +34,8 @@
     text-transform: uppercase;
 }
 
-.esqueciSenha-link{
-    cursor: pointer;
-}
-
-.cadastro-link{
+.esqueciSenha-link,
+.cadastro-link {
     cursor: pointer;
 }
 
@@ -60,49 +58,35 @@ input:hover {
     border-color: #e9d62f;
 }
 
-.inputEmail{
+.inputEmail,
+.inputSenha {
     color: white;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     display: inline-block;
 }
 
-.inputSenha{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.esqueciSenha-text{
+.esqueciSenha-text,
+.cadastro-text {
     color: white;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
 }
 
-.esqueciSenha-text:hover{
-    color: #eee241
+.esqueciSenha-text:hover,
+.cadastro-text:hover {
+    color: #eee241;
 }
 
-.cadastro-text{
+.botaoLogin {
+    background-color: rgb(93, 88, 102);
     color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-}
-
-.cadastro-text:hover{
-    color: #eee241
-}
-
-.botaoLogin{
-    background-color:  rgb(93, 88, 102);
-    color: white;
-    font:'Arial';
-    padding: 15px 30px; 
+    font: 'Arial';
+    padding: 15px 30px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 50px;
-    width: 400px; 
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,15 +94,73 @@ input:hover {
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-  
-  .botaoLogin:hover {
+
+.botaoLogin:hover {
     background-color: #303235;
     transform: scale(1.05);
     border-color: yellow;
-  }
+}
 
-  .mensagem{
+.mensagem {
     color: yellow;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .login {
+        width: 90%;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .botaoLogin {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .inputEmail,
+    .inputSenha {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .login-header h2 {
+        font-size: 22px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .botaoLogin {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .mensagem {
+        font-size: 16px;
+    }
+}

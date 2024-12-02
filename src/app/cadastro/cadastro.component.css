@@ -16,6 +16,7 @@
     margin: 40px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 700px;
+    max-width: 100%;
 }
 
 .cadastro-header {
@@ -52,78 +53,30 @@ input:hover {
     border-color: #e9d62f;
 }
 
-.inputEmail{
+.inputEmail,
+.inputSenha,
+.inputNome,
+.inputTelefone,
+.inputDocumento,
+.inputLogradouro,
+.inputCep,
+.inputCidade,
+.inputComplemento {
     color: white;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     display: inline-block;
 }
 
-.inputSenha{
+.botaoCadastro {
+    background-color: rgb(93, 88, 102);
     color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.inputNome{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.inputTelefone{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.inputDocumento{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.inputLogradouro{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.inputCep{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.inputCidade{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.inputComplemento{
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.botaoCadastro{
-    background-color:  rgb(93, 88, 102);
-    color: white;
-    font:'Arial';
-    padding: 15px 30px; 
+    font: 'Arial';
+    padding: 15px 30px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 50px;
-    width: 400px; 
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,22 +84,22 @@ input:hover {
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-  
-  .botaoCadastro:hover {
+
+.botaoCadastro:hover {
     background-color: #303235;
     transform: scale(1.05);
     border-color: yellow;
-  }
+}
 
-  .botaoSair{
-    background-color:  rgb(93, 88, 102);
+.botaoSair {
+    background-color: rgb(93, 88, 102);
     color: white;
-    font:'Arial';
-    padding: 15px 30px; 
+    font: 'Arial';
+    padding: 15px 30px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 50px;
-    width: 400px; 
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,21 +107,21 @@ input:hover {
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-  
-  .botaoSair:hover {
+
+.botaoSair:hover {
     background-color: #303235;
     transform: scale(1.05);
     border-color: yellow;
-  }
+}
 
-  .mensagem{
+.mensagem {
     color: yellow;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
-  }
+}
 
-  .error-message {
-    color: #fffefe; 
+.error-message {
+    color: #fffefe;
     font-size: 14px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -176,15 +129,15 @@ input:hover {
 }
 
 input.ng-invalid.ng-touched {
-    border: 2px solid #d9534f; 
+    border: 2px solid #d9534f;
 }
 
 input.ng-valid.ng-touched {
-    border: 2px solid #5bc0de; 
+    border: 2px solid #5bc0de;
 }
 
 input.ng-invalid.ng-touched + .error-message {
-    color: #ebebeb; 
+    color: #ebebeb;
     padding: 5px;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -192,7 +145,7 @@ input.ng-invalid.ng-touched + .error-message {
 }
 
 .error-message-global {
-    color: #f0ad4e; 
+    color: #f0ad4e;
     font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
@@ -205,7 +158,74 @@ button:disabled {
 }
 
 .error-message {
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 14px;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .cadastro {
+        width: 90%;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .cadastro-header h2 {
+        font-size: 24px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .botaoCadastro,
+    .botaoSair {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .inputEmail,
+    .inputSenha,
+    .inputNome,
+    .inputTelefone,
+    .inputDocumento,
+    .inputLogradouro,
+    .inputCep,
+    .inputCidade,
+    .inputComplemento {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cadastro {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .cadastro-header h2 {
+        font-size: 22px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .botaoCadastro,
+    .botaoSair {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .mensagem {
+        font-size: 16px;
+    }
 }

@@ -36,4 +36,8 @@ export class ClienteService {
     return this.http.post('http://localhost:8090/api/clientes/login', { email, senha }, { responseType: 'text' });
   }
   
+
+recuperarSenha(email: string): Observable<string> {
+    return this.http.post<string>('http://localhost:8090/api/clientes/recuperar-senha', { email });
+}
 }
